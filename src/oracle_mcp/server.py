@@ -787,19 +787,24 @@ async def get_purchase_agreement_lines_details(
 def main():
     try:
         logger.info("Starting the Oracle MCP Server...")
-        # mcp.run(transport = "stdio")
-        mcp.run(
-            transport = "streamable-http",
-            host="127.0.0.1",
-            port=8000
-        )
+        mcp.run(transport = "stdio")
 
     except ConfigurationError as exc:
-        logger.error("Oracle MCP startup failed: Server Stopped")
+        logger.exception(f"Oracle MCP startup failed: Server Stopped. Error: {exc}")
+        print(
+            f"Oracle MCP startup failed: {exc}",
+            file = sys.stderr,
+            flush = True
+        )
         sys.exit(1)
 
     except Exception as exc:
-        logger.error(f"Unexpected Error Occurred: {exc}")
+        logger.exception(f"Unexpected Error Occurred: {exc}")
+        print(
+            f"Oracle MCP startup failed: {exc}",
+            file = sys.stderr,
+            flush = True
+        )
         sys.exit(1)
 
 if __name__ == "__main__":
