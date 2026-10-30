@@ -1,0 +1,18 @@
+[project]
+name = "oracle-mcp"
+version = "0.1.0"
+description = "An MCP server for interacting with Oracle Fusion Cloud Purchasing APIs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastmcp>=4.1.0",
+    "httpx>=0.28.1"
+]
+
+[project.scripts]
+oracle-mcp = "oracle_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
