@@ -1,8 +1,8 @@
-from oracle_mcp.utils.exception import ConfigurationError, OracleAPIError, OracleJSONDecodeError
+from oracle_fusion_purchasing_mcp.utils.exception import ConfigurationError, OracleAPIError, OracleJSONDecodeError
 from fastmcp import FastMCP, Context
-from oracle_mcp.utils.logger import logger
+from oracle_fusion_purchasing_mcp.utils.logger import logger
 import httpx
-from oracle_mcp.utils.helper import get_env_variable, status_code_error_msg
+from oracle_fusion_purchasing_mcp.utils.helper import get_env_variable, status_code_error_msg
 from contextlib import asynccontextmanager
 
 @asynccontextmanager

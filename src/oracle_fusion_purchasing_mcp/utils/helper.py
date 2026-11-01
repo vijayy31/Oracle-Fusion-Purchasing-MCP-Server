@@ -1,5 +1,5 @@
-from oracle_mcp.utils.logger import logger
-from oracle_mcp.utils.exception import ConfigurationError, OracleAPIError
+from oracle_fusion_purchasing_mcp.utils.logger import logger
+from oracle_fusion_purchasing_mcp.utils.exception import ConfigurationError, OracleAPIError
 import os, sys
 from dotenv import load_dotenv
 load_dotenv(override=True)

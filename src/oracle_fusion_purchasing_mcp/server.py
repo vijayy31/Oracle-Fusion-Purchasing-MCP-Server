@@ -1,9 +1,9 @@
 import os, sys
 from fastmcp import FastMCP, Context
 from fastmcp.exceptions import ToolError
-from oracle_mcp.utils.exception import ConfigurationError
-from oracle_mcp.utils.logger import logger
-from oracle_mcp.utils.api_call import oracle_get, lifespan
+from oracle_fusion_purchasing_mcp.utils.exception import ConfigurationError
+from oracle_fusion_purchasing_mcp.utils.logger import logger
+from oracle_fusion_purchasing_mcp.utils.api_call import oracle_get, lifespan
 
 from dotenv import load_dotenv
 load_dotenv(override=True)
